@@ -1,0 +1,25 @@
+1. Introdução
+Este trabalho apresenta a implementação de um sistema de Descoberta de Conhecimento em Bases de Dados (KDD), focado no processamento de um glossário jurídico. O objetivo principal foi transformar dados brutos não estruturados em uma lista organizada, única e quantificada.
+
+2. Metodologia e Funcionalidades
+O script desenvolvido em Python realiza as seguintes etapas de processamento:
+
+Limpeza de Dados (Data Cleaning): Remoção de caracteres especiais (pontuação) e padronização para letras minúsculas.
+
+Tratamento de Tipagem: Diferenciação entre termos textuais e valores numéricos. Foi implementada uma lógica de conversão para int, corrigindo o erro de ordenação lexicográfica e garantindo que números sejam ordenados por seu valor real (ex: 2 vindo antes de 107).
+
+Contagem de Frequência: Através do uso de dicionários, o sistema identifica e conta as ocorrências repetidas de cada termo no texto original.
+
+Ordenação Híbrida: Utilização de algoritmos de ordenação para organizar o glossário final, separando blocos numéricos de blocos alfabéticos para evitar conflitos de tipos.
+
+3. Algoritmos de Ordenação
+Foram implementados e testados três métodos distintos para comparação de eficiência:
+
+Bubble Sort: Método por trocas adjacentes.
+
+Selection Sort: Método por seleção do menor elemento.
+
+Sort Nativo (Timsort): Utilizado para a persistência final devido à sua alta performance.
+
+4. Resultados Obtidos
+O sistema gera como saída o arquivo palavras_ordenadas.txt, contendo o glossário final em formato de tabela, listando o item e sua respectiva contagem de repetições. O tempo de execução para o volume de dados testado foi otimizado, demonstrando a eficiência da linguagem Python para tarefas de mineração de dados.
